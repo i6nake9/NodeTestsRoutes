@@ -8,11 +8,11 @@ const PORT = process.env.PORT;
 
 const server = http.createServer((req, res) => {
 	if (req.url === '/') {
-		res.writeHead(200);
 		res.setHeader('Content-Type', 'text/html');
-		return res.end(() => {
-			'<h1>Test</h1>';
-		});
+		res.write(
+			'<html> <head>Server Response</head><body><h1>Hello!</h1></body></html>'
+		);
+		return res.end();
 	}
 
 	if (req.url === '/users') {
