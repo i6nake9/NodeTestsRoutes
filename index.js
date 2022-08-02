@@ -6,7 +6,7 @@ dotenv.config();
 const PORT = process.env.PORT;
 // Test GET from insomnia
 app.get('/', (req, res) => {
-	res.send('Hello world from Node.JS ');
+	res.send('Hello world from Node.Js ');
 });
 
 app.listen(PORT, () => {
